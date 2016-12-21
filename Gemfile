@@ -23,6 +23,7 @@ gem 'bootstrap-sass'
 gem 'high_voltage'
 group :development do
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'rails_layout'
 end
 group :development, :test do
@@ -31,3 +32,4 @@ end
 group :production do
   gem 'pg'
 end
+gem 'rails_12factor', group: :production
