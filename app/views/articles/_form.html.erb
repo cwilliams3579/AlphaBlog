@@ -1,0 +1,39 @@
+<div class="text-center">
+  <form class="form-horizontal" action="/articles" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <fieldset>
+
+      <!-- Form Name -->
+      <h1 class="text-center">Create Article</h1>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="title">Title</label>
+        <div class="col-md-4">
+          <input id="title" name="article[title]" type="text" placeholder="Enter a title" class="form-control input-md">
+
+        </div>
+      </div>
+
+      <!-- Textarea -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="description">Description</label>
+        <div class="col-md-4">
+          <textarea class="form-control" id="description" name="article[description]" placeholder="Enter a description"></textarea>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for=""></label>
+        <div class="col-md-4">
+          <input type="submit" class="btn btn-primary" value="Submit" />
+        </div>
+
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+
+<%= link_to "Back to articles", articles_path %>
