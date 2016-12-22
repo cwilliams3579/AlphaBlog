@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  root to: 'visitors#index'
   get 'articles/index'
   get 'articles/new'
-
-  root to: 'visitors#index'
+  get 'signup', to: 'users#new'
   resources :articles
   resources :visitors
+  resources :users, except: [:new]
 end

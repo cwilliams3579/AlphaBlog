@@ -1,0 +1,53 @@
+<%= render 'shared/errors', obj: @user %>
+<div class="text-center">
+  <form class="form-horizontal" action="/users" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <fieldset>
+
+      <!-- Form Name -->
+      <h1 class="text-center">Signup for Alpha Blog</h1>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="username">User Name</label>
+        <div class="col-md-4">
+          <input id="username" name="user[username]" type="text" placeholder="Enter your username" class="form-control input-md" />
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="email">Email</label>
+        <div class="col-md-4">
+          <input class="form-control" type="email" id="email" name="user[email]" placeholder="johndoe@gmail.com"/>
+        </div>
+      </div>
+      <!-- Password -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="password">Password</label>
+        <div class="col-md-4">
+          <input class="form-control" type="password" id="password" name="user[password]" placeholder="Create secure password"/>
+        </div>
+      </div>
+      <!-- Password Confirmation -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="password_confirmation">Password Confrimation</label>
+        <div class="col-md-4">
+          <input class="form-control" type="password" id="password_confirmation" name="user[password_confirmation]" placeholder="Confirm password"/>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for=""></label>
+        <div class="col-md-4">
+          <input type="submit" class="btn btn-primary btn-lg btn-block" value="Sign up" />
+        </div>
+
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+
+<%= link_to "Back to articles", articles_path %>
