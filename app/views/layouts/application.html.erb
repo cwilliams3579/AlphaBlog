@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Alpha Blog" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Alpha Blog" %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
-
-  </body>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Alpha Blog" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Alpha Blog" %>">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <%= render 'layouts/navigation' %>
+  </header>
+  <div class="container">
+  <main role="main">
+    <%= render 'layouts/messages' %>
+  </main>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+</body>
 </html>

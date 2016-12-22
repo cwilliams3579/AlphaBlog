@@ -1,7 +1,58 @@
 // import the CSS framework
+$navbar-default-bg: #08088A;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+#logo{
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.jumbotron{
+  background-image: url("rails.jpg");
+  background-size: cover;
+  height: 650px;
+}
+.jumbotron h1{
+  color: #fff;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
+  font-weight: bold;
+
+}
+
+footer{
+  margin-top: 30px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+footer ul{
+  float: right;
+  list-style: none;
+}
+
+footer ul li{
+  float: left;
+  margin-left: 15px;
+}
 // make all images responsive by default
 img {
   @extend .img-responsive;
