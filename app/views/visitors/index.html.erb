@@ -1,13 +1,18 @@
-<!-- Page Content -->
-<div class="container">
-
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <h1>Alpha Blog</h1>
-            
-        </div>
-    </div>
-    <!-- /.row -->
-
-</div>
-<!-- /.container -->
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @articles.each do |a| %>
+    <tr>
+      <td><%= a.title %></td>
+      <td><%= a.description %></td>
+      <td><%= link_to "Create new article", new_article_path %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

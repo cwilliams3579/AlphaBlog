@@ -1,2 +1,19 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <% @articles.each do |a| %>
+      <td><%= a.title %></td>
+      <td><%= a.description %></td>
+      <td><%=  %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
