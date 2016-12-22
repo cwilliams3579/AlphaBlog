@@ -53,6 +53,14 @@ footer ul li{
   float: left;
   margin-left: 15px;
 }
+
+#edit-btn{
+  margin-top: 20px;
+}
+
+#edit-cancel{
+  margin-top: 10px;
+}
 // make all images responsive by default
 img {
   @extend .img-responsive;
