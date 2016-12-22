@@ -1,10 +1,11 @@
+<%= render 'shared/errors', obj: @article %>
 <div class="text-center">
   <form class="form-horizontal" action="/articles" method="post">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <fieldset>
 
       <!-- Form Name -->
-      <h1 class="text-center">Create Article</h1>
+      <h1 class="text-center">Create an Article</h1>
 
       <!-- Text input-->
       <div class="form-group">
@@ -27,7 +28,7 @@
       <div class="form-group">
         <label class="col-md-4 control-label" for=""></label>
         <div class="col-md-4">
-          <input type="submit" class="btn btn-primary btn-lg btn-block" value="Submit" />
+          <input type="submit" class="btn btn-primary btn-lg btn-block" value="Create Article" />
         </div>
 
       </div>
