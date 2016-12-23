@@ -1,0 +1,16 @@
+<h1 class="text-center">Log in</h1>
+
+  <%= form_for(:session, :html => {class: "form-horizontal", role: "form"}, url: login_path) do |f| %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control', placeholder: "johndoe@gmail.com", autofocus: true  %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control', autocomplete: "off" %>
+
+    <%= f.submit "Log in", class: "btn btn-primary btn-lg btn-block", id: "edit-btn" %>
+  <% end %>
+
+<div class="text-center" id="edit-cancel">
+  [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+</div>
