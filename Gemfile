@@ -31,6 +31,7 @@ group :development do
 end
 group :development, :test do
   gem 'sqlite3'
+  gem 'rails-controller-testing'
   gem 'faker'
   gem 'hirb'
 end
