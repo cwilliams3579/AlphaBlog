@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= content_for?(:title) ? yield(:title) : "Alpha Blog" %></title>
-  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Alpha Blog" %>">
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Bloggerspot" %>">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
   <%= csrf_meta_tags %>
@@ -13,12 +13,12 @@
     <%= render 'layouts/navigation' %>
   </header>
   <div class="container">
-  <main role="main">
+
     <%= render 'layouts/messages' %>
     <%= yield %>
     <%= render 'layouts/footer' %>
     <%= debug(params) if Rails.env.development? %>
-  </main>
+
     </div>
 </body>
 </html>
