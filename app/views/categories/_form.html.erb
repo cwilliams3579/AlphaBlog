@@ -1,0 +1,18 @@
+
+<%= render 'shared/errors', obj: @category %>
+<% provide(:title, "New Category") %>
+
+
+  <div class="text-center ">
+    <%= form_for(@category, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control', placeholder: "Enter category name", autofocus: true %>
+
+    <%= f.submit class: "btn btn-primary btn-lg btn-block", id: "edit-btn" %>
+    <% end %>
+  </div>
+
+<div class="text-center" id="edit-cancel">
+  [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+</div>
