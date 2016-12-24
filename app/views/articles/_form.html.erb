@@ -1,40 +1,26 @@
 <%= render 'shared/errors', obj: @article %>
-<div class="text-center">
-  <form class="form-horizontal" action="/articles" method="post">
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-    <fieldset>
 
-      <!-- Form Name -->
-      <h1 class="text-center">Create an Article</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
 
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="title">Title</label>
-        <div class="col-md-4">
-          <input id="title" name="article[title]" type="text" placeholder="Enter a title" class="form-control input-md">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control', placeholder: "Enter title", autofocus: true %>
 
-        </div>
+    <%= f.label :description %>
+    <%= f.text_area :description, rows: 10, class: 'form-control', placeholder: "Enter a description of the article" %>
+
+    <div class="row">
+      <div class="col-sm-offset-2 col-sm-8">
+        <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |cb| %>
+          <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox") + cb.text} %>
+        <% end %>
       </div>
-
-      <!-- Textarea -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="description">Description</label>
-        <div class="col-md-4">
-          <textarea class="form-control" rows="8" id="description" name="article[description]" placeholder="Enter a description"></textarea>
-        </div>
-      </div>
-
-      <!-- Button -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for=""></label>
-        <div class="col-md-4">
-          <input type="submit" class="btn btn-primary btn-lg btn-block" value="Create Article" />
-        </div>
-
-      </div>
-
-    </fieldset>
-  </form>
+    </div>
+    <%= f.submit class: "btn btn-primary btn-lg btn-block", id: "edit-btn" %>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "Back to articles", articles_path %>
+<div class="text-center" id="edit-cancel">
+  [ <%= link_to "Cancel request and return to articles listing", articles_path %> ]
+</div>
