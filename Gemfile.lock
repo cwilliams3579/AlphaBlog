@@ -39,7 +39,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
-    autoprefixer-rails (6.5.4)
+    autoprefixer-rails (6.6.0)
       execjs
     bcrypt (3.1.11)
     better_errors (2.1.1)
@@ -63,11 +63,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.0.3)
+    concurrent-ruby (1.0.4)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
-    faker (1.6.6)
+    faker (1.7.1)
       i18n (~> 0.5)
     ffi (1.9.14)
     globalid (0.3.7)
@@ -97,7 +97,7 @@ GEM
     minitest (5.10.1)
     multi_json (1.12.1)
     nio4r (1.2.1)
-    nokogiri (1.6.8.1)
+    nokogiri (1.7.0)
       mini_portile2 (~> 2.1.0)
     pg (0.19.0)
     puma (3.6.2)
@@ -120,9 +120,9 @@ GEM
       actionpack (~> 5.x)
       actionview (~> 5.x)
       activesupport (~> 5.x)
-    rails-dom-testing (2.0.1)
+    rails-dom-testing (2.0.2)
       activesupport (>= 4.2.0, < 6.0)
-      nokogiri (~> 1.6.0)
+      nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
     rails_12factor (0.0.3)
@@ -204,6 +204,7 @@ DEPENDENCIES
   rails-controller-testing
   rails_12factor
   rails_layout
+  rake
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -218,4 +219,4 @@ RUBY VERSION
    ruby 2.3.3p222
 
 BUNDLED WITH
-   1.13.6
+   1.13.7
