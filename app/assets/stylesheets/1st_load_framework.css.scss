@@ -1,11 +1,11 @@
 // import the CSS framework
-$navbar-default-bg: #1B0ED9;
+$navbar-default-bg: #2B62E3;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 .badge{
   background-color: #cef6f5;
-  text-transform: uppercase;
+//  text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
 }
@@ -18,7 +18,7 @@ $navbar-default-bg: #1B0ED9;
 }
 header{
   color: white;
-  text-transform: uppercase;
+//  text-transform: uppercase;
 }
 #logo{
   float: left;
@@ -34,10 +34,10 @@ header{
   text-decoration: none;
 }
 
-.jumbotron{
-  background-image: url("http://2.bp.blogspot.com/-rfklwIe9kLg/VP2Te6lDwkI/AAAAAAAAABo/KN0b0JPjp_g/s1600/Blogger.png");
+body{
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/68/ae/cc/68aecc196d9f0d49a064c0abcb26a8ec.jpg");
   background-size: cover;
-  height: 650px;
+//  height: 650px;
 }
 .jumbotron h1{
   color: #fff;
