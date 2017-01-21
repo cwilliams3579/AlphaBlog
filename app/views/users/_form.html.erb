@@ -14,7 +14,7 @@
     <%= f.label :password %>
     <%= f.password_field :password, class: 'form-control' %>
 
-    <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-primary btn-lg btn-block", id: "edit-btn") %>
+    <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-primary btn-lg btn-block", id: "edit-btn", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Processing..."}) %>
     <% end %>
   </div>
 </div>

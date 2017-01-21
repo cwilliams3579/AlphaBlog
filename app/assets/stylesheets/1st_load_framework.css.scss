@@ -35,8 +35,10 @@ header{
 }
 
 body{
-  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/68/ae/cc/68aecc196d9f0d49a064c0abcb26a8ec.jpg");
+  background: url('https://cdn.pixabay.com/photo/2015/10/04/08/06/blog-970722_960_720.jpg');
   background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
 //  height: 650px;
 }
 .jumbotron h1{

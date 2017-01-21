@@ -8,7 +8,7 @@
     <%= f.label :password %>
     <%= f.password_field :password, class: 'form-control', autocomplete: "off" %>
 
-    <%= f.submit "Log in", class: "btn btn-primary btn-lg btn-block", id: "edit-btn" %>
+    <%= f.button "Log in", class: "btn btn-primary btn-lg btn-block", id: "edit-btn", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Signing in..."} %>
   <% end %>
 
 <div class="text-center" id="edit-cancel">

@@ -2,6 +2,8 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
   before_action :require_user, except: [:index, :show]
   before_action :require_same_user, only: [:edit, :update, :destroy]
+  expose :articles, ->{ Article.all }
+  expose :article
 
   def index
     @articles = Article.paginate(page: params[:page], per_page: 5)
