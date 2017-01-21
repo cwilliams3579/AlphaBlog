@@ -7,7 +7,6 @@
 default: &default
   adapter: sqlite3
   pool: 5
-  username: ubuntu
   timeout: 5000
 
 development:
