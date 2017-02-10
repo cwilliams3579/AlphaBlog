@@ -1,5 +1,84 @@
-<!--
-<div class="jumbotron text-center">
+<div class="container">
+<% @articles.each do |a| %>
+    <!--Main layout-->
+    <div class="container">
+        <div class="row">
+
+            <!--Main column-->
+            <div class="col-lg-8">
+
+                <!--Post-->
+                <div class="post-wrapper">
+                    <!--Post data-->
+                    <h1 class="h1-responsive"><%= link_to a.title, article_path(a) %></h1>
+                    <h3 id="author">Written by <%= a.user.username if a.user %></h3> <h4 id="time"> <%= time_ago_in_words(a.created_at) %> ago</h4>
+                    <br>
+                    <!--Featured image -->
+                    <div class="view overlay hm-white-light z-depth-1-half">
+                        <img src="http://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg" class="img-fluid " alt="">
+                        <div class="mask">
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <!--Post excerpt-->
+                    <p><%= truncate(a.description, length: 400) %></p>
+                    <!--"Read more" button-->
+                    <button class="btn btn-primary">Read more</button>
+                </div>
+                <!--/.Post-->
+                <br><br>
+                <hr>
+
+            </div>
+            <!--Sidebar-->
+            <div class="col-lg-4">
+              <% if a.categories.any? %>
+                <div class="widget-wrapper">
+                    <h4>Categories:</h4>
+                    <br>
+                    <div class="list-group">
+                        <%= render a.categories %>
+                    </div>
+                </div>
+                <% end %>
+
+
+                <!-- <div class="widget-wrapper">
+                    <h4>Subscription form:</h4>
+                    <br>
+                    <div class="card">
+                        <div class="card-block">
+                            <p><strong>Subscribe to our newsletter</strong></p>
+                            <p>Once a week we will send you a summary of the most useful news</p>
+                            <div class="md-form">
+                                <i class="fa fa-user prefix"></i>
+                                <input type="text" id="form1" class="form-control">
+                                <label for="form1">Your name</label>
+                            </div>
+                            <div class="md-form">
+                                <i class="fa fa-envelope prefix"></i>
+                                <input type="text" id="form2" class="form-control">
+                                <label for="form2">Your email</label>
+                            </div>
+                            <button class="btn btn-primary">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div> -->
+            <!--/.Sidebar-->
+        </div>
+    </div>
+    <!--/.Main layout-->
 
 </div>
--->
+<% end %>
+<!--Pagination-->
+<nav class="text-xs-center">
+    <p><%#= will_paginate %></p>
+</nav>
+<!--/.Pagination-->
+<!--Footer-->

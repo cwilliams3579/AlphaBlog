@@ -7,6 +7,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.paginate(page: params[:page], per_page: 5)
+    @categories = Category.all
   end
 
   def new
@@ -49,12 +50,15 @@ class ArticlesController < ApplicationController
   end
 
   private
+
   def article_params
     params.require(:article).permit(:title, :description, category_ids: [])
   end
+
   def set_article
     @article = Article.find(params[:id])
   end
+
   def require_same_user
     if current_user != @article.user and !current_user.admin?
       flash[:danger] = "You can only edit or delete your own articles"

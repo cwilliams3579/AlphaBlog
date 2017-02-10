@@ -2,12 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$primary-color: #337ab7;
+
 .listing{
   list-style: none;
   padding-left: 0;
 }
 a {
-  color: #337ab7;
+  color: $primary-color;
 }
 
 .foot {
@@ -23,4 +25,12 @@ a {
   float: left;
   padding-top: 9px;
   padding-right: 5px;
+}
+
+h1, h3, h5, p, small{
+  color: $primary-color;
+}
+#author, #time {
+  color: $primary-color;
+  display: inline-block;
 }

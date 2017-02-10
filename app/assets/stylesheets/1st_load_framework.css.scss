@@ -1,3 +1,4 @@
+$primary-color: #337ab7;
 // import the CSS framework
 $navbar-default-bg: #2B62E3;
 @import "bootstrap-sprockets";
@@ -35,10 +36,11 @@ header{
 }
 
 body{
-  background: url('background.jpg');
+  // background: url('background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: $primary-color;
+
 //  height: 650px;
 }
 .jumbotron h1{
@@ -134,7 +136,7 @@ img {
 // to make views framework-neutral
 main {
   @extend .container;
-  background-color: #eee;
+  // background-color: #eee;
   padding-bottom: 80px;
   width: 120%;
   margin-top: 51px; // accommodate the navbar
